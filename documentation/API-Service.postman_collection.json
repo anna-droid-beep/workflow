@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "7b72619d-ca57-415a-b6a3-67d0bae3da69",
+		"name": "API-Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateWorkflow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workflow_name\": \"Workflow 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1412/workflow/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1412",
+					"path": [
+						"workflow",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddStep",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workflow_index\": 0,\r\n    \"step_name\": \"Status 3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1412/workflow/add_step",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1412",
+					"path": [
+						"workflow",
+						"add_step"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeStepName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workflow_index\": 0,\r\n    \"step_index\": 1,\r\n    \"step_new_name\": \"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1412/workflow/change_step_name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1412",
+					"path": [
+						"workflow",
+						"change_step_name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddItem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workflow_index\": 0,\r\n    \"item\": {\r\n        \"item_type\": \"PROJECT\",\r\n        \"item_name\": \"project 2\",\r\n        \"video\": \"video\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1412/workflow/add_item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1412",
+					"path": [
+						"workflow",
+						"add_item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpgradeItem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workflow_index\": 0,\r\n    \"item_index\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1412/workflow/upgrade_item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1412",
+					"path": [
+						"workflow",
+						"upgrade_item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Downdgrade Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workflow_index\": 0,\r\n    \"item_index\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1412/workflow/downgrade_item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1412",
+					"path": [
+						"workflow",
+						"downgrade_item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MoveItemToStep",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workflow_index\": 0,\r\n    \"item_index\": 0,\r\n    \"new_step_index\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1412/workflow/move_item_to_step",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1412",
+					"path": [
+						"workflow",
+						"move_item_to_step"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
