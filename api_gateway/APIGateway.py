@@ -3,7 +3,6 @@ import logging
 
 from services.Workflow import WorkflowAddItemService, WorkflowAddStepService, WorkflowChangeStepNameService, WorkflowCreationService, \
     WorkflowMoveItemToStepService, WorkflowUpgradeItemService, WorkflowDowngradeItemService
-from services.Item import ItemCreationService
 
 
 class APIGateway(tornado.web.Application):
