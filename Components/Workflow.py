@@ -2,6 +2,7 @@ import json
 
 
 class Workflow:
+
     def __init__(self, workflow_name):
         self._name = workflow_name
         self._steps = []
@@ -82,7 +83,7 @@ class Workflow:
 
     def move_item_to_step_index(self, item, step_index):
         if step_index-1 > self.last_step_index or step_index-1 < 0:
-            raise ValueError(f"step_index must be between [1,{len(self.steps)}. Was {step_index}")
+            raise ValueError(f"step_index must be between [1,{len(self.steps)}]. Was {step_index}")
         item.item_step = self._steps[step_index-1]
 
     def __str__(self):
